@@ -1,0 +1,39 @@
+<button onclick="myFunction()">Check expr</button>
+
+<!-paragraful cu valoarea noastra->
+<p id="dvr1">carti = 12 :-)</p> <!- ok ->
+<p id="dvr2">caiete = 18 + 9 :-)</p> <!- ok ->
+<p id="dvr3">stilouri = 547 * 12 :-)</p> <!- ok ->
+<p id="dvr4">povesti = 778994 - 98745 :-)</p> <!- ok ->
+<p id="dvr5">agende = 123 + 1334 </p> <!- not ok ->
+
+<script>
+function myFunction() {
+    // expr compara valoarea paragrafului cu expresia noastra
+   var expr1 = document.getElementById("dvr1").innerHTML; 
+	 var expr2 = document.getElementById("dvr2").innerHTML;
+	 var expr3 = document.getElementById("dvr3").innerHTML;
+	 var expr4 = document.getElementById("dvr4").innerHTML;
+	 var expr5 = document.getElementById("dvr5").innerHTML;
+	
+    //verificam val lui str cu expresia reg , dak e ok ne afis ca merge , ivers ..nu merge
+    if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(expr1)) 
+        {
+		document.getElementById("dvr1").innerHTML = ":-)";
+		}
+   else 
+         {     document.getElementById("dvr1").innerHTML = ":-(";}
+    if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(expr2)) 
+        {
+            document.getElementById("dvr2").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr2").innerHTML = ":-(";}
+	
+	if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(expr3)) 
+        {
+            document.getElementById("dvr3").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr3").innerHTML = ":-(";}
+	
+	if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(expr4)) 
+        {
